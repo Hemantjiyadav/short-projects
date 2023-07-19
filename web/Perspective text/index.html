@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective Text</title>  
+    <style>
+        body{
+            background-color: black ;
+        }
+        .wrap{
+            width: 20em;
+            height: 50vh;
+            margin: 0 auto;
+            perspective: 15em;
+        }
+        .text-box{
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            transform: rotateX(50deg);
+            overflow: hidden;
+        }
+        h2{
+            line-height: 1em;
+            color: orangered;
+            animation-name: down;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            font-family: sans-serif;
+            padding-left: 1em;
+        }
+        @keyframes down{
+            0% {padding-top: 10px;}
+            100% {padding-top: 150px;}
+        }
+    </style>                                                        
+</head>
+<body>
+     <div class="wrap">
+        <div class="text-box">
+            <h2>Thank you</h2>
+            <h2>Easy Learn Axis</h2>
+            <h2>Subscibe</h2>
+        </div>
+     </div>                                                                                                                                                                                                                                                                                                                                                                                                                   
+</body>
+</html>

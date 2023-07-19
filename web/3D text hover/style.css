@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vw;
+    background: #f08080;
+}
+
+.threeD {
+    color: darkgray;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    font-family: sans-serif;
+    transition: 0.3s;
+    text-shadow: 1px 1px 0 gray, 1px 2px 0 gray, 1px 3px 0 gray, 1px 4px 0 gray, 1px 5px 0 gray, 1px 6px 0 gray, 1px 7px 0 gray, 1px 8px 0 gray, 5px 13px 15px black;
+}
+
+.threeD:hover{
+     transition: 0.3s;
+     transform: scale(1.1)translate(-50%, -50%);
+     text-shadow: 1px -1px 0 gray, 1px -2px 0 gray, 1px -3px 0 gray, 1px -4px 0 gray, 1px -5px 0 gray, 1px -5px 0 gray, 1px -6px 0 gray, 1px -7px 0 gray, 1px -8px 0 gray, 5px -13px 15px black, 5px -13px 25px #808080 ;
+}

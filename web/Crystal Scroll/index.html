@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Scroll</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+        integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <style>
+        #crystals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 480px;
+            height: 100%;
+            background: transparent;
+        }
+
+        .crystal_01 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(http://img.finalfantasyxiv.com/Ids/promo/pc/glabal/images/world/what/crystal_01.png)repeat-y;
+        }
+
+        .crystal_02 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(http://img.finalfantasyxiv.com/Ids/promo/pc/global/images/world/what/cryatal_02.png)repeat-y;
+        }
+
+        .crystal_03 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(http://img.finalfantasyxiv.com/Ids/promo/pc/global/images/world/what/crystal_03.png)repeat-y;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000">
+    <div id="crystals">
+        <div class="crystal_01"></div>
+        <div class="crystal_02"></div>
+        <div class="crystal_03"></div>
+    </div>
+    <script>
+        $(function () {
+            var posY1 = 0;
+            var posY2 = 0;
+            var posY3 = 0;
+            var imgH = 500;
+            setInterval(function () {
+                if (posY1 <= -900) posY1 = 0;
+                if (posY2 <= -900) posY2 = 0;
+                if (posY3 <= -1200) posY3 = 0;
+
+                posY1 -= 1;
+                posY2 -= 2;
+                posY3 -= 3;
+                $('.crystal_01').css({
+                    backgroundPosition: '0' +
+                        posY1 + 'px'
+                });
+                $('.crystal_02').css({
+                    backgroundPosition: '0' +
+                        posY2 + 'px'
+                });
+                $('.crystal_03').css({
+                    backgroundPosition: '0' + posY3 + 'px'
+                }, 50);
+
+                $(window).scroll(function () {
+                    pageNavFunc();
+                });
+                pageNavFunc();
+            });
+        })
+    </script>
+</body>
+
+</html>
